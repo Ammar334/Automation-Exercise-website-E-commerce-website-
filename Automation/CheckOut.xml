@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="selainum_packge.Tests.Checkout_NegativeSenario"/>
+      <class name="selainum_packge.Tests.Checkout_positiveSenario"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

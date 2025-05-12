@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="٢٠٢٥-٠٥-١٢T١٧:٥٣:٢٩ EEST" name="Default suite" finished-at="٢٠٢٥-٠٥-١٢T١٧:٥٣:٣٨ EEST" duration-ms="9820">
+  <suite started-at="٢٠٢٥-٠٥-١٢T١٩:١١:٣٩ EEST" name="Suite" finished-at="٢٠٢٥-٠٥-١٢T١٩:١١:٤٦ EEST" duration-ms="7000">
     <groups>
     </groups>
-    <test started-at="٢٠٢٥-٠٥-١٢T١٧:٥٣:٢٩ EEST" name="Default test" finished-at="٢٠٢٥-٠٥-١٢T١٧:٥٣:٣٨ EEST" duration-ms="9820">
-      <class name="selainum_packge.Tests.AddToCart_PositiveSenario">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:selainum_packge.Tests.AddToCart_PositiveSenario@3382f8ae]" started-at="٢٠٢٥-٠٥-١٢T١٧:٥٣:٢٩ EEST" name="openBrowser" finished-at="٢٠٢٥-٠٥-١٢T١٧:٥٣:٣٥ EEST" duration-ms="6529" status="PASS">
+    <test started-at="٢٠٢٥-٠٥-١٢T١٩:١١:٣٩ EEST" name="Test" finished-at="٢٠٢٥-٠٥-١٢T١٩:١١:٤٦ EEST" duration-ms="7000">
+      <class name="selainum_packge.Tests.TestCases_Test">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:selainum_packge.Tests.TestCases_Test@62452cc9]" started-at="٢٠٢٥-٠٥-١٢T١٩:١١:٣٩ EEST" name="openBrowser" finished-at="٢٠٢٥-٠٥-١٢T١٩:١١:٤٥ EEST" duration-ms="5825" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="AddToCartFromRecomendedItem()[pri:4, instance:selainum_packge.Tests.AddToCart_PositiveSenario@3382f8ae]" started-at="٢٠٢٥-٠٥-١٢T١٧:٥٣:٣٥ EEST" name="AddToCartFromRecomendedItem" finished-at="٢٠٢٥-٠٥-١٢T١٧:٥٣:٣٨ EEST" duration-ms="2863" status="PASS">
+        <test-method signature="testCases_VerifyPage()[pri:1, instance:selainum_packge.Tests.TestCases_Test@62452cc9]" started-at="٢٠٢٥-٠٥-١٢T١٩:١١:٤٥ EEST" name="testCases_VerifyPage" finished-at="٢٠٢٥-٠٥-١٢T١٩:١١:٤٦ EEST" duration-ms="943" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddToCartFromRecomendedItem -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:selainum_packge.Tests.AddToCart_PositiveSenario@3382f8ae]" started-at="٢٠٢٥-٠٥-١٢T١٧:٥٣:٣٨ EEST" name="closeBrowser" finished-at="٢٠٢٥-٠٥-١٢T١٧:٥٣:٣٨ EEST" duration-ms="357" status="PASS">
+        </test-method> <!-- testCases_VerifyPage -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:selainum_packge.Tests.TestCases_Test@62452cc9]" started-at="٢٠٢٥-٠٥-١٢T١٩:١١:٤٦ EEST" name="closeBrowser" finished-at="٢٠٢٥-٠٥-١٢T١٩:١١:٤٦ EEST" duration-ms="196" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- selainum_packge.Tests.AddToCart_PositiveSenario -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- selainum_packge.Tests.TestCases_Test -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

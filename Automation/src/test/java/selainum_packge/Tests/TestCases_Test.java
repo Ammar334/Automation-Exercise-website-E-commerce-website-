@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import selainum_packge.Pages.HomePage;
 import selainum_packge.Pages.TestCasesPage;
 
-public class TestCases_PositiveSenario extends TestBase {
+public class TestCases_Test extends TestBase {
 	HomePage homeObject = new HomePage(driver);
 	TestCasesPage TestCasesObject= new TestCasesPage(driver);
 	

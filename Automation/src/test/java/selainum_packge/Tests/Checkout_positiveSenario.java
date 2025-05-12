@@ -10,6 +10,7 @@ import selainum_packge.Pages.LoginPage;
 import selainum_packge.Pages.ProductsPage;
 import selainum_packge.Pages.RegisterPage;
 
+import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
 
@@ -141,6 +142,56 @@ public class Checkout_positiveSenario extends TestBase{
   	 registerobject.continueAccount();
   	 
  }
+ public void Verifyaddressincheckout() throws InterruptedException {
+	 Assert.assertEquals("rgba(255, 165, 0, 1)",homeObject.homeLink.getCssValue("color"));
+	 homeObject.openRegisterationPage();
+	 registerobject.userCanRegister(name, email);
+	 wait.until(ExpectedConditions.visibilityOf(registerobject.enterAccountMessage));
+ 	 Assert.assertEquals("ENTER ACCOUNT INFORMATION", registerobject.enterAccountMessage.getText());
+	 registerobject.enterAccountInformation(password, day, month, year, firstName, lastName, company, address, country, state, city, zipcode, address);
+	 wait.until(ExpectedConditions.visibilityOf(registerobject.successMessage));
+ 	 Assert.assertTrue(registerobject.successMessage.getText().equalsIgnoreCase("Account Created!"));/// الطريقة الثانية
+ 	 registerobject.continueAccount();
+ 	 wait.until(ExpectedConditions.visibilityOf(registerobject.loggedInLink));
+ 	 Assert.assertEquals("Logged in as "+name, registerobject.loggedInLink.getText());
+	 homeObject.openProductsPage();
+	 CartObject.AddToChartBtn.click();
+	 homeObject.openCartPage();
+	 CartObject.ProceedToCheckoutBtn.click();	    
+	 Assert.assertEquals(address, CartObject.deliveryaddress.getText());
+	 Assert.assertEquals(address, CartObject.bilingaddress.getText());
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
+     js.executeScript(
+		"let subject = document.getElementsByName('message')[0];" +
+        "subject.scrollIntoView({ behavior: 'smooth' });"
+	 );
+     CartObject.TextAreaTxt.sendKeys("zagazig");
+     CartObject.PlaceOrderBtn.click();
+     CartObject.nameOnCardTxt.sendKeys("Ammar");
+     CartObject.cardnumberTxt.sendKeys("Ammar Yasser");
+     CartObject.cvcTxt.sendKeys("322");
+     CartObject.expirymonthTxt.sendKeys("12");
+     CartObject.expiryyearTxt.sendKeys("2024");
+     CartObject.PayandConfirmOrderBtn.click();
+	 js.executeScript(
+		"let subject = document.getElementsByClassName('btn btn-default add-to-cart')[0];" +
+		"subject.scrollIntoView({ behavior: 'smooth' });"
+	 );
+	 Thread.sleep(2000);
+	 
+	
+ 	
+   	 homeObject.openCartPage();
+   	 CartObject.FULLAddProductAndBuyafterReg(city, firstName, mobileNumber, address, month, year);
+   	 wait.until(ExpectedConditions.visibilityOf(CartObject.PlacedOrdersuccessMassage));
+   	 Assert.assertEquals("ORDER PLACED!",CartObject.PlacedOrdersuccessMassage.getText());
+   	 CartObject.clickContinueAfterRegCart();
+   	 registerobject.deleteAccount();
 
+   	 String deleteText = "Account Deleted!";
+   	 wait.until(ExpectedConditions.visibilityOf(registerobject.deleteMessage));
+   	 Assert.assertEquals(deleteText.toUpperCase(), registerobject.deleteMessage.getText());
+   	 registerobject.continueAccount();
+ }
  
 }

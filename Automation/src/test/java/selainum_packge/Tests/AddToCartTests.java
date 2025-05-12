@@ -13,7 +13,7 @@ import selainum_packge.Pages.HomePage;
 import selainum_packge.Pages.ProductDetailPage;
 import selainum_packge.Pages.ProductsPage;
 
-public class AddToCart_PositiveSenario extends TestBase{
+public class AddToCartTests extends TestBase{
 	HomePage homeObject = new HomePage(driver);
 	CartPage CartObject = new CartPage(driver);
 	ProductsPage ProductObject= new ProductsPage(driver);

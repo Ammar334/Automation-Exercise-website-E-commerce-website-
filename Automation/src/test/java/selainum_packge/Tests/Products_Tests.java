@@ -17,7 +17,7 @@ import selainum_packge.Pages.LoginPage;
 import selainum_packge.Pages.ProductDetailPage;
 import selainum_packge.Pages.ProductsPage;
 
-public class Products_PositiveSenario extends TestBase{
+public class Products_Tests extends TestBase{
 	HomePage homeObject = new HomePage(driver);
 	ProductsPage ProductObject= new ProductsPage(driver);
 	ProductDetailPage ProductDetailObject = new ProductDetailPage(driver);
